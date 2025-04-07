@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Extractor",
+  "version": "1.0",
+  "description": "Extract transcript text from YouTube videos",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/watch?*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
